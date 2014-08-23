@@ -9,3 +9,5 @@ This is also a project for me to get my feet wet with writing and
 publishing elisp packages. I figured it I'd start out with something
 that just delivers something other than editor functionality.... a
 parcel of snippets.
+
+[1]: http://visionmedia.github.io/mocha/
