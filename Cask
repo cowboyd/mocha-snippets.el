@@ -7,4 +7,5 @@
 (depends-on "yasnippet")
 
 (development
- (depends-on "ert-runner"))
+ (depends-on "ecukes")
+ (depends-on "coffee-mode"))
