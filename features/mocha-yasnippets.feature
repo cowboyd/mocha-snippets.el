@@ -4,16 +4,18 @@ Feature: Using Mocha Snippets in JavaScript
   writing my tests. Enter Mocha YASsnippets. These handly snippets
   will save time by giving shortcuts to all of the Mocha constructs.
 
-  Scenario: Adding a describe block.
+  Scenario: It loads JavaScript snippets
     Given an empty JavaScript buffer
     When I type 'desc' and then hit the TAB key
     Then I should see an describe block in place like
 """
-describe('something', function() {
-  
-})
+describe('something', function() {})
 """
-    And the 'something' should be highlighted.
-    When I type "something awesome"
 
-  Scenario: Doing a describe in something that is not 
+  Scenario: It loads CoffeScript snippets
+    Given an empty CoffeScript buffer
+    When I type 'bef' and then hit the TAB key
+    Then I should see a beforEach block
+"""
+beforeEach ->
+"""
