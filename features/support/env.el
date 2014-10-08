@@ -16,7 +16,13 @@
 (require 'ert)
 
 (Setup
- ;; Before anything has run
+ (require 'coffee-mode)
+ (require 'js2-mode)
+ (require 'yasnippet)
+ ;; remove home dir/.emacs.d/snippets from yas-path
+ (pop yas-snippet-dirs)
+ (yas-global-mode +1)
+ (prin1 yas-snippet-dirs)
  )
 
 (Before

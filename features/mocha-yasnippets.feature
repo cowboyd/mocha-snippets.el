@@ -6,14 +6,21 @@ Feature: Using Mocha Snippets in JavaScript
 
   Scenario: It loads JavaScript snippets
     Given I am in buffer "some.js"
-    When I type "bef"
+    When I turn on js-mode
+    And I type "bef"
     And I press "TAB"
     Then I should see "beforeEach(function() {})"
 
   Scenario: It loads CoffeScript snippets
-    Given an empty CoffeScript buffer
-    When I type 'bef' and then hit the TAB key
-    Then I should see a beforEach block
-"""
-beforeEach ->
-"""
+    Given I am in buffer "some.coffee"
+    When I turn on coffee-mode
+    When I type "bef"
+    And I press "TAB"
+    Then I should see "beforeEach ->"
+
+  Scenario It loads JavasScript snippets in js2-mode
+    Given I am in buffer "some-js2.js"
+    When I turn on js2-mode
+    And I type "bef"
+    And I press "TAB"
+    Then I should see "beforeEach(function() {})"

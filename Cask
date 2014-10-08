@@ -8,4 +8,5 @@
 
 (development
  (depends-on "ecukes")
- (depends-on "coffee-mode"))
+ (depends-on "coffee-mode")
+ (depends-on "js2-mode"))
