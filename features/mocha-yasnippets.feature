@@ -5,12 +5,10 @@ Feature: Using Mocha Snippets in JavaScript
   will save time by giving shortcuts to all of the Mocha constructs.
 
   Scenario: It loads JavaScript snippets
-    Given an empty JavaScript buffer
-    When I type 'desc' and then hit the TAB key
-    Then I should see an describe block in place like
-"""
-describe('something', function() {})
-"""
+    Given I am in buffer "some.js"
+    When I type "bef"
+    And I press "TAB"
+    Then I should see "beforeEach(function() {})"
 
   Scenario: It loads CoffeScript snippets
     Given an empty CoffeScript buffer

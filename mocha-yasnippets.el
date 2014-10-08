@@ -1,5 +1,5 @@
 ;;; package --- Summary
-;;; Boody Yoga
+;;;
 ;;; Commentary:
 ;;;  Here is commentary
 ;;; Code:
