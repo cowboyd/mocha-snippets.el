@@ -9,4 +9,4 @@
  (depends-on "coffee-mode")
  (depends-on "js2-mode"))
 
-(files "mocha-snippets.el" ("snippets" "snippets/*"))
+(files "mocha-snippets.el" "snippets")
