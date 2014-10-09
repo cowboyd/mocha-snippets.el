@@ -1,11 +1,13 @@
-# Mocha YASsnippets
+## Mocha Snippets
+
+tldr; `M-x package-install mocha-snippets`
 
 I like [Mocha][1], and I use it a lot. As such, I have a bunch of
 snippets that I've developed for it to make working with tests faster.
 
 It contains snippets for both `coffee-mode` and `js-mode`
 
-## Snippets
+### Snippets
 
 `desc` -> describe block
 
@@ -19,7 +21,7 @@ It contains snippets for both `coffee-mode` and `js-mode`
 
 `it` -> it block
 
-For both setup and teardown, the short forms `bef` and `afte` have
+For both setup and teardown, the short forms `bef` and `aft` have
 been given to `beforeEach` and `afterEach` respectively, since
 those are more commonly used (and if they aren't, then perhaps they
 shoud be)
