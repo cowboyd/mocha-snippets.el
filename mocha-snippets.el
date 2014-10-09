@@ -43,5 +43,5 @@
 (eval-after-load "yasnippet"
   '(mocha-snippets-initialize))
 
-(provide 'mocha-yasnippets)
-;;; mocha-yasnippets.el ends here
+(provide 'mocha-snippets)
+;;; mocha-snippets.el ends here

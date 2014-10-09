@@ -11,7 +11,7 @@
 
 (add-to-list 'load-path mocha-yasnippets-root-path)
 
-(require 'mocha-yasnippets)
+(require 'mocha-snippets)
 (require 'espuds)
 (require 'ert)
 
