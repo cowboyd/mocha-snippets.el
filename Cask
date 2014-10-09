@@ -1,8 +1,6 @@
 (source melpa)
 
-(package "mocha-snippets" "0.1.0" "YASnippets for the Mocha JavaScript testing framework")
-
-(depends-on "yasnippet" "0.8.0")
+(package-file "mocha-snippets.el")
 
 (development
  (depends-on "ecukes")
