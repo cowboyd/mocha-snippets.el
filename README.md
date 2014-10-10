@@ -1,4 +1,7 @@
 ## Mocha Snippets
+[![Build Status](https://travis-ci.org/cowboyd/mocha-snippets.el.png?branch=master)](https://travis-ci.org/cowboyd/mocha-snippets.el)
+
+
 
 tldr; `M-x package-install mocha-snippets`
 
