@@ -130,6 +130,7 @@ install:
         sudo apt-get -qq install emacs-snapshot-el;
     fi
   - curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+  - export PATH=$HOME/.cask/bin:$PATH
   - cask install
 
 before_script:
