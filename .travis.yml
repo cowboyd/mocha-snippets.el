@@ -91,7 +91,6 @@ before_install:
   - git submodule --quiet update --init --recursive
 
 install:
-  - curl -fsSkL https://raw.github.com/cask/cask/master/go | python
 # - if [ "$EMACS" = 'xemacs21' ]; then
 #       sudo apt-get -qq update &&
 #       sudo apt-get -qq -f install &&
@@ -130,6 +129,7 @@ install:
         sudo apt-get -qq install emacs-snapshot &&
         sudo apt-get -qq install emacs-snapshot-el;
     fi
+  - curl -fsSkL https://raw.github.com/cask/cask/master/go | python
   - cask install
 
 before_script:
