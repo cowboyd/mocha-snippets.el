@@ -133,12 +133,12 @@ install:
   - export PATH=$HOME/.cask/bin:$PATH
   - cask install
 
-before_script:
-  - if [ "$EMACS" = 'emacs-snapshot' ]; then
-        make downloads-latest;
-    else
-        make downloads;
-    fi
+# before_script:
+#   - if [ "$EMACS" = 'emacs-snapshot' ]; then
+#         make downloads-latest;
+#     else
+#         make downloads;
+#     fi
 
 ###
 ### the actual build/test command
