@@ -9,7 +9,7 @@ Feature: Using Mocha Snippets in JavaScript
     When I turn on js-mode
     And I type "bef"
     And I press "TAB"
-    Then I should see "beforeEach(function() {})"
+    Then I should see "beforeEach(function() {"
 
   Scenario: It loads CoffeScript snippets
     Given I am in buffer "some.coffee"
@@ -23,4 +23,4 @@ Feature: Using Mocha Snippets in JavaScript
     When I turn on js2-mode
     And I type "bef"
     And I press "TAB"
-    Then I should see "beforeEach(function() {})"
+    Then I should see "beforeEach(function() {"
