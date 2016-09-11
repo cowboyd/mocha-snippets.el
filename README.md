@@ -1,4 +1,5 @@
 ## Mocha Snippets
+[![MELPA](http://melpa.milkbox.net/packages/mocha-snippets-badge.svg)](http://melpa.milkbox.net/#/mocha-snippets)
 [![Build Status](https://travis-ci.org/cowboyd/mocha-snippets.el.png?branch=master)](https://travis-ci.org/cowboyd/mocha-snippets.el)
 
 
