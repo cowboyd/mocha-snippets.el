@@ -2,27 +2,7 @@
 ;; files in this directory whose names end with "-steps.el" will be
 ;; loaded automatically by Ecukes.
 
-(Given "^I have \"\\(.+\\)\"$"
-  (lambda (something)
-    ;; ...
-    ))
-
-(When "^I have \"\\(.+\\)\"$"
-  (lambda (something)
-    ;; ...
-    ))
-
-(Then "^I should have \"\\(.+\\)\"$"
-  (lambda (something)
-    ;; ...
-    ))
-
-(And "^I have \"\\(.+\\)\"$"
-  (lambda (something)
-    ;; ...
-    ))
-
-(But "^I should not have \"\\(.+\\)\"$"
-  (lambda (something)
-    ;; ...
-    ))
+(And "^I customize the string delimiter to double quote$"
+     (lambda ()
+       (make-local-variable 'mocha-snippets-string-delimiter)
+       (setq mocha-snippets-string-delimiter "\"")))
