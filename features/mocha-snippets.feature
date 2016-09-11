@@ -39,3 +39,19 @@ Feature: Customizing snippet expansion
     And I type "desc"
     And I press "TAB"
     Then I should see "describe("context", function() {"
+
+  Scenario:
+    Given I am in buffer "function-syntax.js"
+    And I turn on js-mode
+    And I customize the function syntax to =>
+    And I type "bef"
+    And I press "TAB"
+    Then I should see "beforeEach(()=> {"
+
+  Scenario:
+    Given I am in buffer "donezo.js"
+    And I turn on js-mode
+    And I customize the function syntax to =>
+    And I type "bef."
+    And I press "TAB"
+    Then I should see "beforeEach((done)=> {"

@@ -61,5 +61,58 @@ been given to `beforeEach` and `afterEach` respectively, since
 those are more commonly used (and if they aren't, then perhaps they
 shoud be)
 
+### Customization
+
+Mocha snippets have several configuration points to let your control
+how snippets are generated.
+
+#### mocha-snippets-string-delimiter
+
+By default, mocha snippets uses single quotes to delimit strings in
+its templates. However, you can set this variable to either `"` or
+`\`` to use a different delimiter:
+
+``` javascript
+//desc=>
+describe('something', function() {
+  //cursor here.
+});
+```
+
+configure the varibale
+
+``` emacs-lisp
+(setq mocha-snippets-string-delimiter "\"")
+```
+
+and it now becomes:
+``` javascript
+//desc=>
+describe("something", function() {
+  //cursor here.
+});
+```
+
+#### mocha-snippets-use-fat-arrows
+
+Out of the box, mocha will use "classic" function syntax for all of
+the functions it generates for you. However, if you like to use ES6
+fat arrow syntax, you can set this variable and your snippets will now
+all use it.
+
+``` emacs-lisp
+(setq mocha-snippets-use-fat-arrows t)
+```
+
+``` javascript
+//desc=>
+describe('something', ()=> {
+  //cursor here.
+});
+```
+
+
+
+
 [1]: https://mochajs.org
 [2]: https://mochajs.org/#asynchronous-code
