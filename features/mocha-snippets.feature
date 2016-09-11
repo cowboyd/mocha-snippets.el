@@ -24,3 +24,18 @@ Feature: Using Mocha Snippets in JavaScript
     And I type "bef"
     And I press "TAB"
     Then I should see "beforeEach(function() {"
+
+Feature: Customizing snippet expansion
+  Some people use '' delimited strings, others use "". It's up to
+  them, but whatever they choose, we want to make sure that they have
+  the option to use the snippets, but apply their own style. This
+  means changing how strings are represented as well as how function
+  syntax is used.
+  
+  Scenario:
+    Given I am in buffer "string-delimiter.js"
+    And I turn on js-mode
+    And I customize the string delimiter to double quote
+    And I type "desc"
+    And I press "TAB"
+    Then I should see "describe("context", function() {"

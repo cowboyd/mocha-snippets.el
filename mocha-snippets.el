@@ -63,5 +63,12 @@
 (eval-after-load "yasnippet"
   '(mocha-snippets-initialize))
 
+(defcustom mocha-snippets-string-delimiter "'"
+  "String delimiter will be used when expanding mocha snippets.
+Some people like to use single quotes, others double quotes.  This let's them
+choose."
+  :type 'string
+  :group 'mocha-snippets)
+
 (provide 'mocha-snippets)
 ;;; mocha-snippets.el ends here
