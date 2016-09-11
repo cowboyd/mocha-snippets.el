@@ -6,3 +6,8 @@
      (lambda ()
        (make-local-variable 'mocha-snippets-string-delimiter)
        (setq mocha-snippets-string-delimiter "\"")))
+
+(And "^I customize the function syntax to =>$"
+     (lambda ()
+       (make-local-variable 'mocha-snippets-use-fat-arrows)
+       (setq mocha-snippets-use-fat-arrows t)))
