@@ -107,7 +107,7 @@ all use it.
 
 ``` javascript
 //desc=>
-describe('something', ()=> {
+describe('something', () => {
   //cursor here.
 });
 ```

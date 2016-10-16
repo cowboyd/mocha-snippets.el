@@ -46,7 +46,7 @@ Feature: Customizing snippet expansion
     And I customize the function syntax to =>
     And I type "bef"
     And I press "TAB"
-    Then I should see "beforeEach(()=> {"
+    Then I should see "beforeEach(() => {"
 
   Scenario:
     Given I am in buffer "donezo.js"
@@ -54,4 +54,4 @@ Feature: Customizing snippet expansion
     And I customize the function syntax to =>
     And I type "bef."
     And I press "TAB"
-    Then I should see "beforeEach((done)=> {"
+    Then I should see "beforeEach((done) => {"
