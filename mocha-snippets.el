@@ -77,6 +77,12 @@ choose."
   :group 'mocha-snippets
   :require 'mocha-snippets)
 
+(defcustom mocha-snippets-use-parenthesis-around-single-arguments t
+  "Use () around single arguments in ES6 syntax `(done) =>' vs `done =>'"
+  :type 'boolean
+  :group 'mocha-snippets
+  :require 'mocha-snippets)
+
 
 (defun mocha-snippets-function-declaration (&optional params)
   "Function head appropriate for the desired syntax.
@@ -88,10 +94,14 @@ PARAMS, will be substituded as the parameter list for the function.
 E.g.
 
   (mocha-snippets-initialize \"hello, world\") => function(hello, world)"
-  (let ((params (if (not params) "" params)))
-    (if mocha-snippets-use-fat-arrows
-        (format  "(%s) =>" params)
-      (format "function(%s)" params))))
+  (let ((params (if (not params) "" params))
+        (formatting-string "function(%s)"))
+    (when mocha-snippets-use-fat-arrows
+      (setq formatting-string "(%s) =>")
+      (when (and mocha-snippets-use-parenthesis-around-single-arguments
+                 (not (string-match "," params)) ;; When it's a single param
+                 (setq formatting-string "%s =>"))))
+    (format formatting-string params)))
 
 (provide 'mocha-snippets)
 ;;; mocha-snippets.el ends here

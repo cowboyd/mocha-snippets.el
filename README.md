@@ -112,6 +112,22 @@ describe('something', () => {
 });
 ```
 
+#### mocha-snippets-use-parenthesis-around-single-arguments
+
+If you have the `mocha-snippets-use-fat-arrows` variable set, and you want no
+parentheses around single argument functions because of the linter for your
+project, or any reason. You can disable this variable to have no parentheses.
+
+``` emacs-lisp
+(setq mocha-snippets-use-parenthesis-around-single-arguments nil)
+```
+
+``` javascript
+//desc=>
+describe('something', done => {
+  //cursor here.
+});
+```
 
 
 
