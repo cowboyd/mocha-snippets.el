@@ -112,7 +112,29 @@ describe('something', ()=> {
 });
 ```
 
+#### mocha-snippet-add-space-after-function-keyword
 
+Some linting tools requires you to add a space after `function`
+keyword. You have the option to customize it with
+
+``` emacs-lisp
+(setq mocha-snippets-add-space-after-function-keyword t)
+```
+
+``` javascript
+//desc=>
+describe('something', function () {
+  //cursor here.
+});
+```
+
+``` javascript
+//ES6
+//desc=>
+describe('something', () => {
+  //cursor here.
+})
+```
 
 
 [1]: https://mochajs.org
