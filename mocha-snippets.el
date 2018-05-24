@@ -4,6 +4,7 @@
 
 ;; Author: Charles Lowell <cowboyd@frontside.io>
 ;; Version: 0.1.0
+;; Package-Version: 20180523.1013
 ;; Package-Requires: ((yasnippet "0.8.0"))
 ;; Maintainer: Charles Lowell <cowboyd@frontside.io>
 ;; Keywords: test javascript
@@ -99,6 +100,25 @@ E.g.
       (if mocha-snippets-use-fat-arrows
           (format  "(%s)%s=>" params space)
         (format "function%s(%s)" space params))))
+
+(defun mocha-snippets-ts-function-declaration (&optional isAsync)
+  "Function head appropriate for the desired syntax.
+The user can configure whether to use the ES6 function syntax or the 'classic'
+function syntax.  This will return the appropriate declaration depending on
+which is configured: either 'function(): void' or '(): void=>'.
+
+PARAMS, will be substituded as the parameter list for the function.
+E.g.
+
+  (mocha-snippets-initialize \"hello, world\") => function(hello, world)"
+  (let (
+        (beforeFunc (if isAsync "async " ""))
+        (returnType (if isAsync "Promise<void>" "void"))
+        (space (if mocha-snippets-add-space-after-function-keyword " " ""))
+       )
+      (if mocha-snippets-use-fat-arrows
+          (format  "%s()%s: %s=>" beforeFunc space returnType))
+        (format "%sfunction%s(): %s" beforeFunc space returnType))))
 
 (provide 'mocha-snippets)
 ;;; mocha-snippets.el ends here
