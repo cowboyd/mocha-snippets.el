@@ -18,9 +18,16 @@ Feature: Using Mocha Snippets in JavaScript
     And I press "TAB"
     Then I should see "beforeEach ->"
 
-  Scenario It loads JavasScript snippets in js2-mode
+  Scenario: It loads JavasScript snippets in js2-mode
     Given I am in buffer "some-js2.js"
     When I turn on js2-mode
+    And I type "bef"
+    And I press "TAB"
+    Then I should see "beforeEach(() => {"
+
+  Scenario: It loads JavasScript snippets in typescript-mode
+    Given I am in buffer "some-typescript.ts"
+    When I turn on typescript-mode
     And I type "bef"
     And I press "TAB"
     Then I should see "beforeEach(() => {"

@@ -5,6 +5,7 @@
 (development
  (depends-on "ecukes")
  (depends-on "coffee-mode")
- (depends-on "js2-mode"))
+ (depends-on "js2-mode")
+ (depends-on "typescript-mode"))
 
 (files "mocha-snippets.el" "snippets")

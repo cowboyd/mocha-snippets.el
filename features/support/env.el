@@ -18,6 +18,7 @@
 (Setup
  (require 'coffee-mode)
  (require 'js2-mode)
+ (require 'typescript-mode)
  (require 'yasnippet)
  ;; remove home dir/.emacs.d/snippets from yas-path
  (pop yas-snippet-dirs)
