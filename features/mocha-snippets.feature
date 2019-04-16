@@ -9,7 +9,7 @@ Feature: Using Mocha Snippets in JavaScript
     When I turn on js-mode
     And I type "bef"
     And I press "TAB"
-    Then I should see "beforeEach(function() {"
+    Then I should see "beforeEach(() => {"
 
   Scenario: It loads CoffeScript snippets
     Given I am in buffer "some.coffee"
@@ -23,7 +23,7 @@ Feature: Using Mocha Snippets in JavaScript
     When I turn on js2-mode
     And I type "bef"
     And I press "TAB"
-    Then I should see "beforeEach(function() {"
+    Then I should see "beforeEach(() => {"
 
 Feature: Customizing snippet expansion
   Some people use '' delimited strings, others use "". It's up to
@@ -31,27 +31,27 @@ Feature: Customizing snippet expansion
   the option to use the snippets, but apply their own style. This
   means changing how strings are represented as well as how function
   syntax is used.
-  
+
   Scenario:
     Given I am in buffer "string-delimiter.js"
     And I turn on js-mode
     And I customize the string delimiter to double quote
     And I type "desc"
     And I press "TAB"
-    Then I should see "describe("context", function() {"
+    Then I should see "describe("context", () => {"
 
   Scenario:
     Given I am in buffer "function-syntax.js"
     And I turn on js-mode
-    And I customize the function syntax to =>
+    And I customize the function syntax to unbound function
     And I type "bef"
     And I press "TAB"
-    Then I should see "beforeEach(()=> {"
+    Then I should see "beforeEach(function() {"
 
   Scenario:
     Given I am in buffer "donezo.js"
     And I turn on js-mode
-    And I customize the function syntax to =>
+    And I customize the function syntax to unbound function
     And I type "bef."
     And I press "TAB"
-    Then I should see "beforeEach((done)=> {"
+    Then I should see "beforeEach(function(done) {"

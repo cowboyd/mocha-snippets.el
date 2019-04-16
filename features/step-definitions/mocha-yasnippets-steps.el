@@ -7,7 +7,7 @@
        (make-local-variable 'mocha-snippets-string-delimiter)
        (setq mocha-snippets-string-delimiter "\"")))
 
-(And "^I customize the function syntax to =>$"
+(And "^I customize the function syntax to unbound function$"
      (lambda ()
        (make-local-variable 'mocha-snippets-use-fat-arrows)
-       (setq mocha-snippets-use-fat-arrows t)))
+       (setq mocha-snippets-use-fat-arrows nil)))
